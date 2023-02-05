@@ -1,111 +1,88 @@
-import {ScrollView,StyleSheet, Text, View, Image} from 'react-native';
-import { useRoute } from '@react-navigation/native';
-import Style from "./Style/InfoView"
+import { StyleSheet} from 'react-native';
 
-
-const styles = Style; 
-
-export default function InfoView() {
-
-  const route = useRoute();
-
-
-    return (
-
-      <ScrollView>
-      <View style={styles.container}>
-
-      <View style={styles.container2}>
-      
-      <Image style={styles.image} 
-         source={{
-          uri: route.params.data.image}}
-
-      /> 
-      </View>
-
-
-      <View style={styles.container3}>
-      
-      <Text style={styles.title}>Name</Text>
-  
-      <View style={styles.container4}>
-      <Text>{route.params.data.name}</Text>
-
-        </View>
-      
-      </View>
+  export default Style = StyleSheet.create({
    
-     
-      <View style={styles.container3}>
-      
-      <Text style={styles.title}>Species</Text>
+    container: {
+      flex: 1,
+      alignItems:'center',
+      margin: 10,
+        },
+
+    container2: {
+      flex: 1,
+      shadowColor: 'black',
+      shadowRadius: 6,
+      elevation: 15,
+      backgroundColor: 'white',
+     borderRadius: 50
+      },
   
-      <View style={styles.container4}>
-      <Text>{route.params.data.species}</Text>
-
-        </View>
-      
-      </View>
-      
-      <View style={styles.container3}>
-      
-      <Text style={styles.title}>Type</Text>
+      container3: {
+      flex: 1,
+      margin: 30,
+      alignItems:'center',
+      borderColor: 'black',
+      borderWidth: 3,
+      shadowColor: 'black',
+      shadowOffset: { width: 2, height: 3 },
+      shadowRadius: 6,
+      width: 340,
+      elevation: 15,
+      backgroundColor: 'white',
+      borderRadius: 30
+      },            
   
-      <View style={styles.container4}>
-      <Text>{route.params.data.type}</Text>
 
-        </View>
-      
-      </View>
-
-      <View style={styles.container3}>
-      
-      <Text style={styles.title}>Gender</Text>
-  
-      <View style={styles.container4}>
-      <Text>{route.params.data.gender}</Text>
-
-        </View>
-      
-      </View>
-
-      <View style={styles.container3}>
-      
-      <Text style={styles.title}>Origin</Text>
-  
-      <View style={styles.container4}>
-      <Text>{route.params.data.origin.name}</Text>
-
-        </View>
-      
-      </View>
-
-      <View style={styles.container3}>
-      
-      <Text style={styles.title}>Atual Location</Text>
-  
-      <View style={styles.container4}>
-      <Text>{route.params.data.location.name}</Text>
-
-        </View>
-      
-      </View>
-
-      <View style={styles.container3}>
-      
-      <Text style={styles.title}>Episodies</Text>
-  
-      <View style={styles.container5}>
+     container4: {
+     flex: 1,
+     margin: 20,
+     alignItems:'center',
+     position:'absolute',
+     top:30,
+     shadowColor: 'black',
+     shadowOffset: { width: 2, height: 3 },
+     shadowRadius: 6,
+     width: 340,
+     elevation: 15,
+     backgroundColor: 'white',
+     padding:10,
+     borderRadius: 50
+     },      
+                      
+     title: {
+     fontSize:26,
+     height:70         
+     },     
+                            
+                            
+     container5: {
+     margin: -15,
+     alignItems:'center',
+     shadowColor: 'black',
+     shadowOffset: { width: 2, height: 3 },
+     shadowRadius: 6,
+     width: 340,
+     elevation: 15,
+     backgroundColor: 'white',
+     padding:10,
+     borderRadius: 50
+     },      
+                                  
+     title: {
+     fontSize:26,
+     height:70
+     },    
  
-          { route.params.data.episode.map((item)=> <Text >{item}</Text>)}
-          
-        </View>
-      
-      </View>
+   
+    
+  image: {
+    position: "relative",
+    width: 200,
+    height: 180,
+    borderRadius: 30,
+    margin:15,
+    borderColor: 'black',
+    borderWidth: 5,
+  },
 
-      </View>
-      </ScrollView>
-    );
-  }
-
+  });
