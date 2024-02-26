@@ -1,0 +1,1 @@
+Desafio técnico,foi construido um app, onde você pode selecionar seus personagem favorito de Rick e Morty fornecido por https://rickandmortyapi.com/ , salvar localmente e ver quando quiser as informações do personagem.
