@@ -4,7 +4,7 @@ import List from "./Components/List";
 
 
 
-export default function Criptos({navigation}) {
+export default function Home({navigation}) {
     
 const [Data, setData] = useState(null);
 
