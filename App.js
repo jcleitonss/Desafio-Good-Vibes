@@ -4,7 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {MaterialIcons, Fontisto } from "@expo/vector-icons";
-import Criptos from './src/View/Criptos.js';
+import Home from './src/View/Home.js';
 import Favorites from './src/View/Favorites';
 import InfoView from './src/View/InfoView.js';
 
@@ -68,7 +68,7 @@ export default function App({navigation}) {
 const  MainStackNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="Home" >
-      <Stack.Screen name="Home" component={Criptos} options={{ headerShown: false }}
+      <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}
        />
       <Stack.Screen name="Info" component={InfoView}  options={{ headerShown: false }} />
 
